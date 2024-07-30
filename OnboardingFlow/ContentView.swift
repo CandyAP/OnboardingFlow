@@ -8,6 +8,12 @@
 import SwiftUI
 
 struct ContentView: View {
+    let gradientColors: [Color] = [
+        .gradientTop,
+        .gradientBottom
+    ]
+    
+    
     var body: some View {
         VStack {
             TabView {
@@ -15,9 +21,9 @@ struct ContentView: View {
                 FeaturesPage()
             }
             .tabViewStyle(.page)
-            
+            .background(Gradient(colors: gradientColors))
+            .foregroundColor(.white)
         }
-        .padding()
     }
 }
 
